@@ -1,0 +1,59 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Samsung TV",
+      "description": "This is a description of product 1.",
+      "price": 19.99,
+      "category": "Electronics",
+      "created_at": "2023-11-19T00:00:00Z",
+      "updated_at": "2023-11-19T00:00:00Z",
+      "brand": "Samsung",
+      "sku": "SKU123",
+      "stock": 10,
+      "image": "http://placekitten.com/200/300",
+      "is_active": true,
+      "slogan": "This is a slogan for product 1.",
+      "slug": "samsung-tv"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Sony TV",
+      "description": "This is a description of product 2.",
+      "price": 29.99,
+      "category": "Electronics",
+      "created_at": "2023-11-19T00:00:00Z",
+      "updated_at": "2023-11-19T00:00:00Z",
+      "brand": "Sony",
+      "sku": "SKU124",
+      "stock": 10,
+      "image": "http://placekitten.com/200/300",
+      "is_active": true,
+      "slogan": "This is a slogan for product 2.",
+      "slug": "sony-tv"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "LG TV",
+      "description": "This is a description of product 3.",
+      "price": 39.99,
+      "category": "Electronics",
+      "created_at": "2023-11-19T00:00:00Z",
+      "updated_at": "2023-11-19T00:00:00Z",
+      "brand": "LG",
+      "sku": "SKU125",
+      "stock": 10,
+      "image": "http://placekitten.com/200/300",
+      "is_active": true,
+      "slogan": "This is a slogan for product 3.",
+      "slug": "lg-tv"
+    }
+  }
+]

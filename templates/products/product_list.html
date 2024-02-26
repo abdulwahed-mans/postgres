@@ -1,0 +1,37 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %}Products{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1>Products</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for product in products %}
+        <div class="col">
+            <div class="card h-100">
+                <a href="{{ product.get_absolute_url }}">
+                    {% if product.image %}
+                    <img src="{{ product.get_image }}" class="card-img-top" alt="{{ product.name }}" loading="lazy">
+                    {% else %}
+                    <img src="{% static 'assets/images/default.jpg' %}" class="card-img-top" alt="Product Image" loading="lazy">
+                    {% endif %}
+                </a>
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">{{ product.description|truncatechars:50 }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="badge bg-primary rounded-pill">€{{ product.get_price }}</span>
+                        {% if product.get_stock > 0 %}
+                        <span class="badge bg-success rounded-pill">In Stock</span>
+                        {% else %}
+                        <span class="badge bg-danger rounded-pill">Out of Stock</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
